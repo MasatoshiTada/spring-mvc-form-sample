@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="index.html" th:action="@{add}" th:object="${sampleForm}">
+    <table border="1">
+        <tr>
+            <th>Message</th>
+            <td>
+                <input type="text" name="message" th:field="*{message}">
+                <div th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="error"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Birthday</th>
+            <td>
+                <input type="date" name="birthday" th:field="*{birthday}">
+                <div th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}" class="error"></div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+</form></body>
+</html>
