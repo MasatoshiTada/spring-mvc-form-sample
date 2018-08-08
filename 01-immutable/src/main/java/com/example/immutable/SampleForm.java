@@ -15,7 +15,7 @@ public class SampleForm {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 
-    public SampleForm(String message, @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate birthday) {
+    public SampleForm(String message, LocalDate birthday) {
         this.message = message;
         this.birthday = birthday;
     }
