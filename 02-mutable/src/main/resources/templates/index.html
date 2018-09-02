@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Mutable Sample</title>
+    <title>Immutable Sample</title>
 </head>
 <body>
-<h1>Mutable Sample</h1>
+<h1>Immutable Sample</h1>
 <form method="post" action="index.html" th:action="@{add}" th:object="${sampleForm}">
     <table border="1">
         <tr>
@@ -13,6 +13,20 @@
             <td>
                 <input type="text" name="message" th:field="*{message}">
                 <div th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="error"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Additional Message</th>
+            <td>
+                <input type="text" name="additionalMessage" th:field="*{additionalMessage}">
+                <div th:if="${#fields.hasErrors('additionalMessage')}" th:errors="*{additionalMessage}" class="error"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td>
+                <input type="text" name="number" th:field="*{number}">
+                <div th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></div>
             </td>
         </tr>
         <tr>

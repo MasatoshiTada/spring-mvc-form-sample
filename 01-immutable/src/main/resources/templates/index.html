@@ -16,6 +16,20 @@
             </td>
         </tr>
         <tr>
+            <th>Additional Message</th>
+            <td>
+                <input type="text" name="additionalMessage" th:field="*{additionalMessage}">
+                <div th:if="${#fields.hasErrors('additionalMessage')}" th:errors="*{additionalMessage}" class="error"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td>
+                <input type="text" name="number" th:field="*{number}">
+                <div th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></div>
+            </td>
+        </tr>
+        <tr>
             <th>Birthday</th>
             <td>
                 <input type="date" name="birthday" th:field="*{birthday}">

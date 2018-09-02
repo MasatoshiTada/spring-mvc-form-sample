@@ -12,7 +12,7 @@ public class SampleController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("sampleForm", new SampleForm(null, null));
+        model.addAttribute("sampleForm", new SampleForm(null, null, null, null));
         return "index";
     }
 
